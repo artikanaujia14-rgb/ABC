@@ -1,0 +1,314 @@
+ó
+    aQøj_I  ã                  óB  • % S SK Jr  S SKrS SKrS SKrS SKrS SKrS SK r S SKJ	r	  S SK
+J
+r
+  S SKJ
+r
+JrJrJrJr  S SKJrJr  S S KJr  S SKJr  S S	KJr  S S
+KJr  S S
+KJr  \	" \5      RA                  5       RB                  r"\" \"S-
+  5        \"S
+-
+  r#\"S-
+  r$\RJ                  " SS5      r&\'" \RJ                  " S\(" S5      5      5      r)\'" \RJ                  " SS5      5      r*\'" \RJ                  " SS5      5      r+\
+" SSS9r,\,R[                  S\" \#S9S
+S9  0 r.S\/S'   Sr0S S!S"S#S$S%S&S'S(S)S*.
+r1SCS+ jr2SDS, jr3SES- jr4SFS. jr5SGS/ jr6SHS0 jr7\,Rq                  S15      S2 5       r9\,Rq                  S35      S4 5       r:\,Rq                  S55      S6 5       r;\,Ry                  S75      \" S85      \" S95      \" S:5      \" S:5      \" S;5      \" S<5      \" S:5      \" / S=94               SIS> jj5       r=\,Ry                  S?5      SJS@ j5       r>\,Rq                  SA5      SKSB j5       r?g)Lé    )Ú
+annotationsN)ÚPath)ÚAny)Ú FastAPIÚFileÚFormÚ
+HTTPExceptionÚ
+UploadFile)ÚFileResponseÚJSONResponse)Ú
+StaticFiles)ÚOpenAI)ÚImage)Ú BytesIO)Ú
+load_dotenvz.envÚstaticzpolicy_sources.jsonÚOPENAI_VISION_MODELz gpt-4.1ÚMAX_IMAGE_BYTESi  ð Ú
+MAX_IMAGESÚ12ÚSESSION_TTL_SECONDSÚ7200zHOVEN Online AI Image Auditorz0.2.0)ÚtitleÚ versionz /static)Ú	directory)Únamezdict[str, dict[str, Any]]ÚSESSIONSu
+
+  You are HOVEN's ecommerce product-image auditor and visual listing assistant.
+You review images for Amazon India and Flipkart using only the policy information supplied in the request.
+Never claim access to private marketplace ranking algorithms, internal moderation systems, or seller account QC.
+Never guarantee approval, visibility, ranking, conversion, or sales.
+Use three statuses only: HIGH_RISK, NEEDS_REVIEW, LIKELY_OK. LIKELY_OK means no issue was detected in the available checks, not official platform approval.
+Separate observed visual facts from inferences and from facts that need seller confirmation.
+Do not assert material, fitment, leak-proof performance, durability, dimensions, or included accessories from appearance alone.
+Automatically classify every image into exactly one role: MAIN_PRODUCT_CANDIDATE, LIFESTYLE, FEATURE_INFOGRAPHIC, DIMENSIONS, INSTALLATION, CLOSE_UP_DETAIL, PACKAGE_CONTENTS, BRAND_TRUST, COMPARISON, OTHER.
+Recommend an order for a typical listing set. Put the best compliant main-product candidate first; then useful supporting images. Do not mistake file upload order for marketplace slot order.
+For Amazon India, apply the supplied current public rules precisely. Pay special attention to the MAIN image: pure white RGB 255,255,255 background; entire product visible; product approximately 85% of image; no added text, seller logo, watermark, border, graphics, props/accessories not included; accurately depict colour/scale/quantity. The current Seller Central guide says image longest side 500â€“10,000 px, JPEG/TIFF/PNG/non-animated GIF, RGB preferred, 1,000+ pixels recommended for zoom. Also apply supplied all-image requirements; if rules conflict or category-specific applicability is unclear, mark as verify in Seller Central.
+For Flipkart, do not invent precise current category requirements. The official seller image-guidelines page may require Seller Hub access; rely only on facts explicitly supplied in the policy notes. Mark uncertain points as VERIFY_IN_SELLER_HUB.
+Classify infographics and lifestyle images by their visual role, but do not automatically mark them compliant. For Amazon India, the supplied public guide says no text or pricing details on product images (except swatch images); flag overlay/text-heavy secondary graphics for policy verification or high risk according to the supplied source notes. Never assume a common ecommerce practice overrides the platform policy.
+Be specific and actionable. Be frank about uncertainty. Respond naturally in Hindi/Hinglish if the user writes that way.
+zMain product candidatezLifestyle / in-usezFeatures / infographiczDimensions / measurementszInstallation / how-tozClose-up / product detailzPackage contents / accessorieszBrand / trust imagezComparison imageÚOther)
+ÚMAIN_PRODUCT_CANDIDATEÚ	LIFESTYLEÚFEATURE_INFOGRAPHICÚ
+DIMENSIONSÚINSTALLATIONÚCLOSE_UP_DETAILÚPACKAGE_CONTENTSÚ
+BRAND_TRUSTÚ
+COMPARISONÚOTHERc                 ó|   •  [         R                  " [        R                   SS95      $ ! [          a    S0 S.s $ f = f)Nzutf-8)Úencodingz
+not available)Úchecked_dateÚmarketplaces)ÚjsonÚloadsÚ
+RULES_PATHÚ	read_textÚ	Exception© ó    Ú(/mnt/data/hoven_online_ai_auditor/app.pyÚload_policy_sourcesr5   @   sA   € ðEÜzŠzœ*×.Ñ.¸ Ð.Ð@ÓAÐAøÜ
+ó EØ /ÀÑDÒDðEús   ‚&) ©;º;c                 ób   • [         R                  " S5      n U (       d
+  [        SSS9e[         U S9$ )NÚOPENAI_API_KEYi÷  z\AI is not connected yet. Add OPENAI_API_KEY to the server environment, then restart the app.©Ú
+status_codeÚdetail)Ú api_key)ÚosÚgetenvr	   r   )Úkeys    r4   Ú
+get_clientr?   G   s6   € Ü
+)Š)Ð$Ó
+%€CÞ
+Ü¨ð  5Sñ  Tð  	TÜ
+˜#Ñ
+Ðr3   c            	     ó  • [         R                   " 5       n [        R                  5        VVs/ s H%  u  pXR                   SU 5      -
+  [        :”  d  M#  UPM'  
+   nnnU H  n[        R
+                  US 5        M  
+   g s  snnf )NÚ updated)Útimer   ÚitemsÚgetr   Úpop)ÚnowÚsidÚdataÚ expireds       r4   Úcleanup_sessionsrJ   N   sa   € Ü
+)Š)‹+€CÜ$,§N¡NÔ$4ÔmÒ$4‘ys¸¿h¹hÀyÐRUÓ>VÑ8VÔYlÑ8lsÑ$4€GÑmÛˆÜ‰S˜$Öò ùó ns
+   ­"A<ÁA<c           	     ó^  • [        U SS 5      nU(       a  UR                  5       $ / n[        U S/ 5      =(       d    /  HO  n[        US/ 5      =(       d    /  H2  n[        USS5      S;   d  M  UR                  [        US S5      5        M4  
+   MQ  
+   SR                   U5      R                  5       $ )	NÚ
+output_textÚoutputÚ contentÚtypeÚ )rL   ÚtextrQ   Ú
+)Ú getattrÚstripÚappendÚjoin)ÚresponserQ   ÚchunksÚitemrN   s        r4   Úextract_output_textrZ   U   s›   € Ü
+8˜]¨DÓ
+1€DÞ 
+Øz‰z‹|ÐØ€FÜ˜ (¨BÓ/×5°2Ò5ˆÜ˜t Y°Ó3×9°rÒ9ˆGÜw ¨Ó+Ð/FÕFØ—
+‘
+œg g¨v°rÓ:Ö;ó :ñ 6ð 9‰9VÓ
+×
+"Ñ
+"Ó
+$Ð$r3   c                 ó  • [         R                  " SSU R                  5       [         R                  S9n [        R
+                  " U5      n[
+        U[        5      (       a  U$  [         R                  " SU[         R                  S9nU(       a>   [        R
+                  " UR                  S5      5      n[
+        U[        5      (       a  U$  [        SS S9e! [        R                    a     N‰f = f! [        R                    a     N:f = f)	Nz^```(?:json)?\s*|\s*```$rP   )Úflagsz\{.*\}r   éö  zPThe AI returned an unreadable report. Please retry with fewer or smaller images.r8   )
+ÚreÚsubrT   ÚIr-   r.   Ú
+isinstanceÚdictÚJSONDecodeErrorÚsearchÚSÚgroupr	   )rQ   Ú cleanedÚobjÚmatchs       r4   Úparse_json_responserj   a   sä   € ÜfŠfÐ0°"°d·j±j³lÌ"Ï$É$ÑO€Gð
+ÜjŠj˜Ó!ˆÜ
+cœ4×
+ Ñ
+ ØˆJð !ô 
+IŠIi ´·±Ñ5€EÞ ð	Ü—*’*˜UŸ[™[¨›^Ó,ˆCÜ˜#œt×$Ñ$Ø
+ð %ô 
+ Cð  1Cñ  
+Dð  Døô ×
+Ñ
+ó 
+Ùð
+ûô ×#Ñ#ó 	Ùð	ús#   µ,C Â;C0 ÃC-Ã,C-Ã0D ÄD c                ó.  •  [         R                  " [        U 5      5      nUR                  u  pEUR                  =(       d    SR
+                  5       nUR                  n [        XE5      nUUUU [        U 5      UUS. $ ! [          a    [        SSU 3S9ef = f)NÚ unknowné  zCannot read image: r8   ) ÚwidthÚheightÚformatÚmodeÚbytesÚlongest_sideÚcontent_type)
+r   Úopenr   Úsizerp   Úupperrq   r1   r	   ÚmaxÚlen)	ÚrawÚfilenamert   Úimrn   ro   Úfmtrq   Ú longests	            r4   Úimage_metadatar   t   sœ   € ðVÜ
+ZŠZœ  ›Ó
+%ˆØŸ ™ ‰
+ˆØy‰y×%˜I×,Ñ,Ó.ˆØw‰wˆô %Ó €GàØØØÜS“ØØ$ñð øô  ó VÜ¨Ð6IÈ(ÈÐ4TÑUÐUðVús   ‚AA< Á<BÚ/c                 ó&   • [        [        S-
+  5      $ )Nz
+index.html)r
+   Ú
+STATIC_DIRr2   r3   r4   Úhomerƒ   ˆ   s   € ä
+œ
+ \Ñ1Ó
+2Ð2r3   z
+/api/healthc                 ó‚   • S[        [        R                  " S5      5      [        [	        5       R
+                  S5      SS.$ )NÚonliner7   r+   zhIf ai_connected is false, image analysis and chat are unavailable. No offline approval fallback is used.)ÚstatusÚai_connectedÚmodelÚpolicy_checked_dateÚnote)Úboolr<   r=   ÚMODELr5   rD   r2   r3   r4   Úhealthr      s:   € ð ÜœRŸYšYÐ'7Ó8Ó9ÜÜ2Ó4×8Ñ8¸ÓHØzñ
+ð r3   z
+/api/policiesc                 ó   • [        5       $ )N)r5   r2   r3   r4   Úpoliciesr   ˜   s
+   € ä
+Ó
+ Ð r3   z/api/analyze.ÚbothrP   ÚHOVENzBathroom fittings)Ú defaultc              ƒ  ó   #   • [        5         [        U 5      S:  d  [        U 5      [        :”  a  [         SS[         S3S9e1 Skn/ n	/ n
+[	        U SS 9 GHá  u  p¼UR
+                  =(       d    Sn
+XØ;  a  [         SS	UR                   S
+3S9eUR                  5       I S h  v•N nU(       a  [        U5      [        :”  a!  [         SUR                   S
+[        S-   S
+3S9e[        XìR                  =(       d    SU
+ 3U
+5      nU
+S:w  a  U
+OSnU
+S:X  a[  [        R                  " [        U5      5      R                  S5      n[        5       nUR                  USS9  UR                  5       nSnOUnSU S3[         R"                  " U5      R%                  S5      -   n['        [(        R*                  " 5       5      nU	R-                  UUR                  =(       d    SU
+ 3UUSS.5        U
+R-                  SSU SUR                   S[.        R0                  " U5       3S.5        U
+R-                  SUSS .5        GMä  
+   / n[        U 5      S!:”  a
+  [         SS"S9e[	        U SS 9 GHØ  u  p¼UR
+                  =(       d    Sn
+XØ;  a  [         SS#UR                   S$3S9eUR                  5       I S h  v•N nU(       a  [        U5      [        :”  a  [         SS%UR                   S&3S9e[        XìR                  =(       d    S'U
+ 3U
+5      nU
+S:w  a  U
+OSnU
+S:X  a[  [        R                  " [        U5      5      R                  S5      n[        5       nUR                  USS9  UR                  5       nSnOUnSU S3[         R"                  " U5      R%                  S5      -   n['        [(        R*                  " 5       5      nUR-                  UUR                  =(       d    S'U
+ 3UUS(.5        U
+R-                  SS)U SUR                   S[.        R0                  " U5       S*3 S.5        U
+R-                  SUSS .5        GMÛ  
+   [3        5       nUR5                  5       nUR7                  S+0 5      nS,U S-U=(       d    S. S/U=(       d    S. S0U=(       d    S. S1U=(       d    S. S2U=(       d    S. S3[.        R0                  " USS49 S5UR7                  S6S75       S83nU
+R9                  S9SUS.5        [;        5       n UR<                  R?                  [@        S:S[B        S./S;.S<U
+S;./S=9n[E        [G        U5      5      n['        [(        R*                  " 5       5      n [J        RJ                  " 5       [J        RJ                  " 5       U	UUUX#XEUSA./ SB. [L        U '   / n!U	 H!  n"U!R-                  U"SC   U"SD   U"SE   SF.5        M#  
+   U UU![@        UR7                  SG0 5      SH.$  GN5 GN-! [          a    e [H          a  n[         S>S?['        U5      S S@  3S9eS nAff = f7f)INé   rm   zUpload between 1 and z images per audit.r8   >   ú	image/gifú	image/pngú
+image/jpegú
+image/tiffú
+image/webp)Ústartzapplication/octet-streamzUnsupported image format for z#. Use JPEG, PNG, WEBP, GIF or TIFF.z is empty or exceeds the i   z
+ MB limit.zimage-r˜   r–   ÚRGBÚPNG)rp   zdata:z;base64,ÚasciiF)Úidr{   ÚmetadataÚdata_urlÚmanualÚ
+input_textz	IMAGE_ID=z ; FILE=z
+; METADATA=©rO   rQ   Ú
+input_imageÚhigh©rO   Ú	image_urlr:   é   z0Upload no more than 8 original reference photos.z'Unsupported reference image format for Ú.zReference photo z$ is empty or exceeds the size limit.z
+reference-)rž   r{   rŸ   r    zORIGINAL_REFERENCE_ID=z=. This is genuine reference photography, not a listing image.r,   z-Audit this product image set for marketplace=z.
+Product name: znot providedz
+SKU: z
+Brand: z
+
+Category: zb
+Seller-provided product facts/specifications (treat as seller claims, do not infer beyond them): z
+Current policy source notes: ©Úensure_asciia_  
+
+The listing image entries are each labelled with IMAGE_ID and metadata, followed by the image itself. Original reference photos, if present, are labelled ORIGINAL_REFERENCE_ID. Include only listing images in the items array and recommended_gallery_order; reference photos are comparison inputs, not listing slots. Compare listing images with original reference photos for visible differences in shape, colour, finish, handle, joints, threads and components. Describe only visible differences; never claim technical performance or exact material from appearance alone. Analyse the full listing set collectively and each listing image individually. Detect which file is the main-product candidate, lifestyle, infographic/features, dimensions, installation, close-up, package contents, brand/trust, comparison, or other. Recommend a sequence number for a listing gallery, and explain why.
+Return ONLY valid JSON with this exact top-level shape:
+{
+  "overall_status":"HIGH_RISK|NEEDS_REVIEW|LIKELY_OK",
+  "overall_summary":"short plain-language summary",
+  "recommended_gallery_order":[{"image_id":"...","position":1,"reason":"..."}],
+  "missing_image_types":["..."],
+  "items":[{
+    "image_id":"...",
+    "filename":"...",
+    "role":"one exact role key from the system prompt",
+    "role_confidence":0.0,
+    "recommended_position":1,
+    "status":"HIGH_RISK|NEEDS_REVIEW|LIKELY_OK",
+    "observations":["visible facts only"],
+    "issues":[{"severity":"critical|high|medium|low|info","title":"...","evidence":"what is visible or measured","why_it_matters":"...","fix":"specific corrective action","marketplaces":["amazon","flipkart"]}],
+    "platform_checks":{
+      "amazon":{"status":"HIGH_RISK|NEEDS_REVIEW|LIKELY_OK|NOT_SELECTED","checks":[{"rule":"...","result":"pass|fail|verify","evidence":"...","source_key":"..."}]},
+      "flipkart":{"status":"HIGH_RISK|NEEDS_REVIEW|LIKELY_OK|NOT_SELECTED","checks":[{"rule":"...","result":"pass|fail|verify","evidence":"...","source_key":"..."}]}
+    },
+    "improvement_suggestions":["..."],
+    "seller_confirmation_needed":["..."]
+  }],
+  "important_caveats":["..."],
+  "policy_last_checked":"r+   rl   aP  "
+}
+Do not fabricate IDs. Include every uploaded image exactly once in items and recommended_gallery_order. If the evidence is insufficient, use verify / NEEDS_REVIEW. Do not issue blanket passes. In particular, don't claim technical claims such as 15mm fit, PTMT material, leak-proof, or durability are validated merely from the image.r   Úsystem©ÚrolerN   Úuser©rˆ   Úinputr]   zAI analysis failed: é^  )Ú
+marketplaceÚproduct_nameÚskuÚbrandÚcategoryÚ
+product_facts) Ú createdrA   ÚimagesÚreference_imagesÚreportÚ contextÚ historyrž   r{   rŸ   )rž   r{   rŸ   Ú sources)Ú
+session_idr¼   rº   rˆ   Úpolicy_sources)'rJ   ry   r   r	   Ú	enumeratert   r{   Úreadr   r   r   ru   r   Ú convertÚsaveÚgetvalueÚbase64Ú	b64encodeÚdecodeÚstrÚuuidÚuuid4rU   r-   Údumpsr5   ÚlowerrD   Úinsertr?   Ú	responsesÚcreaterŒ   Ú
+SYSTEM_PROMPTrj   rZ   r1   rB   r   )#Úfilesr³   r´   rµ   r¶   r·   r¸   Úreference_filesÚ allowedÚ
+image_itemsÚ
+input_contentÚindexÚuploadrt   rz   ÚmetaÚmimer|   ÚbufÚ
+raw_for_air    Ú item_idÚreference_itemsÚref_idÚrulesÚ	requestedÚmarket_contextÚpromptÚclientrW   r¼   ÚexcrG   Ú	sanitizedrY   s#                                      r4   Ú analyzerè      s  é € ô ÔÜ 
+ˆ5ƒzAƒ~œ˜U›¤jÓ0Ü¨Ð6KÌJÈ<ÐWiÐ4jÑkÐkÚR€GØ(*€KØ*,€MÜ" 5°Õ2‰
+ˆØ×*Ñ*×HÐ.HˆØ
+Ó
+&Ü¨CÐ:WÐX^×XgÑXgÐWhð  iLð  9Mñ  Nð  
+NØ—K‘K“M×!ˆÞ”c˜#“h¤Ó0Ü¨C¸6¿?¹?Ð:KÐKdÔetð  zCñ  fDð  eEð  EOð  9Pñ  Qð  
+QÜ˜c§?¡?×#F¸¸u¸gÐ6FÈÓUˆØ+¨|Ó;‰|ÀˆØ
+˜<Ó
+'ä—’œG C›LÓ)×1Ñ1°%Ó8ˆBÜ“)ˆC˜RŸW™W S°˜WÑ7ØŸ™›ˆJ°
+©àˆJØ˜4˜& Ð)¬F×,<Ò,<¸ZÓ,H×,OÑ,OÐPWÓ,XÑXˆÜ”d—j’j“lÓ#ˆ Ø×ÑØØŸ™×;¨V°E°7Ð+;ØØ Øñ
+
+ô 	
+ð 	×Ñ l¸iÈ ÀyÐPWÐX^×XgÑXgÐWhÐhsÔtx×t~Òt~ð  @Dó  uEð  tFð  =Gñ  Hô  	IØ×Ñ mÀ(ÐV\Ñ]×^ñ5 3ð8 -/€OÜ 
+ˆ?Ó ˜aÓ Ü¨Ð4fÑgÐgÜ" ?¸!Õ<‰
+ˆØ×*Ñ*×HÐ.HˆØ
+Ó
+&Ü¨CÐ:aÐbh×bqÑbqÐarÐrsÐ8tÑuÐuØ—K‘K“M×!ˆÞ”c˜#“h¤Ó0Ü¨CÐ:JÈ6Ï?É?ÐJ[Ð[ð  9Añ  Bð  
+BÜ˜c§?¡?×#J¸
+À5À'Ð6JÈLÓYˆØ+¨|Ó;‰|ÀˆØ
+˜<Ó
+'Ü—’œG C›LÓ)×1Ñ1°%Ó8ˆBÜ“)ˆC˜RŸW™W S°˜WÑ7ØŸ™›ˆJ°
+©àˆJØ˜4˜& Ð)¬F×,<Ò,<¸ZÓ,H×,OÑ,OÐPWÓ,XÑXˆÜ”T—Z’Z“\Ó"ˆØ×Ñ f¸&¿/¹/×:aÈzÐZ_ÐY`ÐMaÐosð  BJñ   Kô  	LØ×Ñ lÐ>TÐU[ÐT\Ð\cÐdj×dsÑdsÐctÐtô  AE÷  AKò  AKð  LPó  AQð  @Rð  ROð  =Pñ  Qô  	RØ×Ñ mÀ(ÐV\Ñ]×^ñ' =ô* 
+ Ó!€EØ×!Ñ!Ó#€IØ—Y‘Y˜~¨rÓ2€NØ>¸y¸kð JØ×-˜~Ð.ð /Ø	×ˆ^Ðð Ø
+×Ð  ð !
+Ø
+×
+%~Ð
+&ð 'bØbo÷  cBð  tBð  bCð CÜ"Ÿjšj¨ÀeÑLÐMð Nð4  Ÿ)™) N°9Ó=Ð>ð ?MðA"P€FðF ×Ñ˜ \¸6ÑBÔCÜ
+‹\€Fð]Ø×#Ñ#×*Ñ*Üà!¸ÌmÑ/\Ð.]Ñ^Ø¨MÑ:ðð +ð 
+ˆô %Ô%8¸Ó%BÓCˆô 
+ŒdjŠj‹lÓ
+€Cä—9’9“;¬4¯9ª9«;Ø°?ÈfØ#,¸lÐafð  P]ñ  ^Øñ	„HˆSMð €IÛˆØ×Ñ  T¡
+¸¸ZÑ8HÐVZÐ[eÑVfÑgÖhñ à¨¸9ÌuÐhm×hqÑhqÐr{Ð}ó  iAñ  Bð  Bòc "ò> "øôD ó Ø
+Ü
+ó ]Ü¨Ð6JÌ3ÈsË8ÐTXÐUXÈ>ÐJZÐ4[Ñ\Ð\ûð]üsL   ‚BXÂWÂH
+XÊ)WÊ*I XÓ2AW Ô4B X×X×X
+×-XØX
+Ø
+Xz	/api/chatc           
+   ƒ  óD  #   • [        5         [        U R                  SS5      5      n[        U R                  SS5      5      R                   5       nU(       d
+  [	        SSS9e[
+        U5      S :”  a
+  [	        SSS9e[        R                  U5      nU(       d
+  [	        S	S
+S9e[        5       n[        5       nUR                  S
+0 5      n[        R                  " UR                  S0 5      S
+S9S S n SSU  S[        R                  " US
+S9 S[        R                  " UR                  S0 5      S
+S9 SU 3S./nUR                  S/ 5      S [          HU  n	UR                  SSU	S    SU	S    S[        R                  " U	S   5       3S.5        UR                  SU	S   SS .5        MW  
+   UR                  S!/ 5      S S"  HU  n	UR                  SS#U	S    SU	S    S[        R                  " U	S   5       3S.5        UR                  SU	S   SS .5        MW  
+   UR                  S$/ 5      S%S  n
+S&S[        S'-   S./S(./n
+U
+ H  nU
+R                  US)   US*   S(.5        M  
+   U
+R                  S+US(.5         UR                  R                  [         U
+S,9n
+[#        U
+5      nUS$   R                  S+SUS./S(.5        US$   R                  S0S1US./S(.5        [&        R&                  " 5       US2'   U[         S3.$ ! [$          a  n[	        S-S.[        U5      S S/  3S9eS nAff = f7f)4NrÀ   rP   Ú messagerm   z&Enter a question for the AI assistant.r8   i   z0Question is too long (maximum 4,000 characters).é”  zKThis audit session has expired. Please upload and analyse the images again.r½   r¼   Frª   i`m  r¢   zAudit report context: z
+Product context: z
+Policy notes: r,   z
+User question: r£   rº   zListing image reference rž   z / r{   rŸ   r¤   r    r¥   r¦   r»   r¨   z!Original product reference photo r¾   iøÿÿÿr¬   a
+  
+You are also a conversational consultant. Answer follow-up questions grounded in this audit and supplied policy notes. If the user asks which image to change, reference filename and image role. Clearly separate observed facts, suggestions, and seller confirmations.r­   r®   rN   r¯   r°   r]   zAI chat failed: r²   Ú	assistantrL   rA   )Úanswerrˆ   )rJ   rÊ   rD   rT   r	   ry   r   r?   r5   r-   rÍ   r   rU   rÒ   rÐ   rÑ   rŒ   rZ   r1   rB   )Ú payloadrG   rê   Ú sessionrå   rá   r½   Ú
+report_textrN   rY   r¾   Úinput_messagesÚmsgrW   rí   ræ   s                   r4   Úchatró   &  s   é € äÔÜ
+
+ˆgk‰k˜,¨Ó+Ó
+,€CÜ'—+‘+˜i¨Ó,Ó-×3Ñ3Ó5€GÞ
+Ü¨Ð4\Ñ]Ð]Ü 
+ˆ7ƒ|dÓ Ü¨Ð4fÑgÐgÜl‰l˜3Ó€GÞ
+Ü¨ð  5Bñ  Cð  	CÜ
+‹\€FÜÓ!€EØk‰k˜) RÓ(€GÜ—*’*˜WŸ[™[¨°2Ó6ÀUÑKÈFÈUÐS€KØ.:ÐF\Ð]hÐ\iÐi|ô  ~B÷  ~Hò  ~Hð  IPð  _dñ  ~eð  }fð  fvô  w{÷  wAò  wAð  BG÷  BKñ  BKð  LZð  \^ó  B_ð  nsñ  wtð  vuð  uFð  GNð  FOð  EPñ  &Qð  %R€Gà—
+‘
+˜H bÓ)¨+¬:Ó6ˆØ‰ Ð8PÐQUÐVZÑQ[ÐP\Ð\_Ð`dÐeoÑ`pÐ_qÐqtÔuy×uÒuð  AEð  FPñ  AQó  vRð  uSð  7Tñ  Uô  	VØ‰ 
+¸DÀÑ<LÐX^Ñ_Ö`ñ 7ð —
+‘
+Ð.°Ó3°B°QÓ7ˆØ‰ Ð8YÐZ^Ð_cÑZdÐYeÐehÐimÐnxÑiyÐhzÐz}ô  C÷  Iò  Ið  JNð  OYñ  JZó  [ð  ~\ð  7]ñ  ^ô  	_Ø‰ 
+¸DÀÑ<LÐX^Ñ_Ö`ñ 8ð k‰k˜) RÓ(¨¨Ð-€GØ'¸lÔTað  erñ  Urñ  6sð  5tñ  uð  v€NÛˆØ×Ñ s¨6¡{¸sÀ9¹~ÑNÖOñ à×Ñ 6°gÑ>Ô?ðYØ×#Ñ#×*Ñ*´¸nÐ*ÐMˆÜ$ XÓ.ˆð ˆIÑ×Ñ vÀLÐZaÑ;bÐ:cÑdÔeØ
+ˆIÑ×Ñ {ÈÐ`fÑ@gÐ?hÑiÔjÜŸš›€GˆIÑØ¤uÑ
+-Ð-øô
+ ó YÜ¨Ð6FÄsÈ3ÃxÐPTÐQTÀ~ÐFVÐ4WÑXÐXûðYüs+   ‚I2L É5)K5 ÊAL Ë5
+LË?LÌLÌL z /api/session/{session_id}/reportc                ó¦   • [         R                  U 5      nU(       d
+  [        SSS9e[         UR                  S5      UR                  S5      S.5      $ ) Nrë   z#Audit session not found or expired.r8   r¼   r½   )r¼   r½   )r   rD   r	   r   )rÀ   rï   s     r4   Ú
+get_reportrõ   N  sD   € äl‰l˜:Ó&€GÞ
+Ü¨Ð4YÑZÐZÜ
+ 7§;¡;¨xÓ#8ÀWÇ[Á[ÐQZÓE[Ñ\Ó
+]Ð]r3   )Úreturnúdict[str, Any])rö   r   )rö   ÚNone)rW   r   rö   rÊ   )rQ   rÊ   rö   r÷   )rz   rr   r{   rÊ   rt   rÊ   rö   r÷   )rÓ   úlist[UploadFile]r³   rÊ   r´   rÊ   rµ   rÊ   r¶   rÊ   r·   rÊ   r¸   rÊ   rÔ   rù   )rî   r÷   )rÀ   rÊ   )@Ú
+__future__r   rÇ   r-   r<   r^   rB   rË   Ú pathlibr   Útypingr   Ú fastapir   r    r   r	   r
+   Úfastapi.responsesr
+   r   Úfastapi.staticfilesr
+   Úopenair   ÚPILr   Úior   Údotenvr   Ú__file__Ú resolveÚparentÚBASE_DIRr‚   r/   r=   rŒ   ÚintrÊ   r   r   r   ÚappÚmountr   Ú__annotations__rÒ   Ú
+ROLE_LABELSr5   r?   rJ   rZ   rj   r   rD   rƒ   r   r   Úpostrè   ró   rõ   r2   r3   r4   Ú<module>r     s—  ðÞ "ã 
+Û 
+Û 	Û 	Û 
+Û 
+Ý Ý ç BÕ Bß 8Ý +Ý Ý Ý Ý á
+‹>×
+!Ñ
+!Ó
+#×
+*Ñ
+*€Ù 
+ˆHvÑÔ Ø
+˜Ñ
+ €
+Ø
+Ð-Ñ
+-€
+Ø
+	Š	Ð'¨Ó3€Ùb—i’iÐ 1±3Ð7GÓ3HÓIÓJ€Ù
+—’˜<¨Ó.Ó
+/€
+Ù˜"Ÿ)š)Ð$9¸6ÓBÓCÐ á
+Ð3¸WÑE€Ø ‡		ˆ)‘[¨:Ñ6¸X€	Ñ Fð ')€Ð
+#Ó (ð
+€
+ð  7Ø%Ø3Ø-Ø+Ø2Ø8Ø(Ø$Ø
+ñ
+€
+ôEôô ô	%ôDô&ð( ‡ˆƒñ3ó ð3ð ‡ˆÓñ ó ð ð ‡ˆÓñ!ó ð!ð ‡ˆ.Óá" 3›iÙ˜F“|Ù˜R›ÙB‹xÙg“ÙÐ,Ó-Ù˜b›Ù(,°RÑ(8ðEBØ
+ðEBàðEBð ð EBð 
+
+ð	EBð
+ ð
+EBð ð
+EBð ðEBð &ôEBó ðEBðP ‡ˆ+Óó$.ó ð$.ðN ‡Ð	+Ó,ó^ó -ñ^r3   
