@@ -1,0 +1,62 @@
+{
+  "checked_date": "2026-11-14",
+  "marketplaces": {
+    "amazon_india": {
+      "verification_level": "Official public Seller Central help pages reviewed",
+      "rules": [
+        "Main image: pure white RGB 255,255,255 background.",
+        "Main image: show the whole product and product should occupy about 85% of the image area.",
+        "Main image: show one unit and only accessories included with the product; no unrelated props.",
+        "Main image: no added text, seller logo, watermark, border, colour block or graphic.",
+        "All images: accurately represent the product and match the listing title.",
+        "Image longest side: 500–10,000 px; images over 1,000 px on the longest side support zoom / are recommended.",
+        "Accepted formats per current guide: JPEG, TIFF, PNG and non-animated GIF; JPEG recommended; RGB preferred.",
+        "Category-specific requirements may apply; verify in Seller Central before upload."
+      ],
+      "notes": "Amazon's public India help documentation is detailed. AI analysis is advisory, not an Amazon upload pre-check or approval.",
+      "sources": ["amazon_image_requirements", "amazon_image_guide", "amazon_nonwhite_background", "amazon_text_logo_graphics"]
+    },
+    "flipkart": {
+      "verification_level": "Official Seller Hub guide link identified; detailed content may require Seller Hub access",
+      "rules": [
+        "Use the official Image Guidelines and Image Uploading guide in Flipkart Seller Hub for current category-specific requirements.",
+        "Flipkart's public AutoQC engineering article describes checks for clear images, centered products, product coverage (at least 70% in its stated example), appropriate content and image/product-detail consistency.",
+        "Do not treat an old/public example as the current universal rule for every category. Mark exact technical requirements that cannot be verified from the accessible official guide as VERIFY_IN_SELLER_HUB."
+      ],
+      "notes": "The official guide is linked from the Seller Hub sitemap, but its public page may render only a JS shell. The auditor must not invent format, dimensions, image-count or overlay rules where current category-specific text cannot be read.",
+      "sources": ["flipkart_image_guidelines", "flipkart_autoqc"]
+    }
+  },
+  "sources": {
+    "amazon_image_requirements": {
+      "title": "Amazon India Seller Central – Image requirements",
+      "url": "https://sellercentral.amazon.in/help/hub/reference/external/G9D4LHG7VDLCMHTY",
+      "kind": "official"
+    },
+    "amazon_image_guide": {
+      "title": "Amazon India Seller Central – Product image guide",
+      "url": "https://sellercentral.amazon.in/help/hub/reference/external/G1881",
+      "kind": "official"
+    },
+    "amazon_nonwhite_background": {
+      "title": "Amazon India Seller Central – Non-white background",
+      "url": "https://sellercentral.amazon.in/help/hub/reference/external/G75PWC4THA8J269P",
+      "kind": "official"
+    },
+    "amazon_text_logo_graphics": {
+      "title": "Amazon India Seller Central – Text, logo, graphics and watermarks",
+      "url": "https://sellercentral.amazon.in/gp/help/external/GB6V3RU3M5XG24GC",
+      "kind": "official"
+    },
+    "flipkart_image_guidelines": {
+      "title": "Flipkart Seller Hub – Image Guidelines and Image Uploading",
+      "url": "https://seller.flipkart.com/sell-online/image-guidelines-and-image-uploading",
+      "kind": "official; sign-in/JavaScript may be required"
+    },
+    "flipkart_autoqc": {
+      "title": "Flipkart Tech – AutoQC: Providing instant Catalog Feedback to Sellers",
+      "url": "https://blog.flipkart.tech/autoqc-providing-instant-catalog-feedback-to-sellers-781c0bc901c6",
+      "kind": "official engineering blog; older public explanation, not a substitute for current Seller Hub rules"
+    }
+  }
+}

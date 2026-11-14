@@ -1,0 +1,18 @@
+HOVEN ONLINE AI IMAGE AUDITOR - DEPLOYMENT NOTES
+
+The project is an online-connected backend + frontend app, not a standalone offline HTML checker.
+
+Required server environment variable:
+OPENAI_API_KEY=<secret key; configure only in host secret settings>
+
+Optional:
+OPENAI_VISION_MODEL=gpt-4.1
+MAX_IMAGES=12
+MAX_IMAGE_BYTES=15728640
+SESSION_TTL_SECONDS=7200
+
+Health endpoint: /api/health
+Policy source endpoint: /api/policies
+Main UI: /
+
+No public URL has been created. Deployment requires an owner-controlled hosting account and an OpenAI API key with billing/API access enabled.
