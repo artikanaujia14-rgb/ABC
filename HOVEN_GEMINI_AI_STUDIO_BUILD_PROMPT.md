@@ -1,4 +1,4 @@
-# HOVEN AI Image Auditor — Google AI Studio Build Mode Prompt
+# HOVEN AI Image Auditor — Gemini-only Google AI Studio Build Mode Prompt
 
 Copy the full prompt below into **Google AI Studio → Build**. Build a full-stack web application, not a static mockup or offline HTML demo.
 
@@ -11,11 +11,12 @@ Build a complete, polished, responsive, full-stack web application named **HOVEN
 ### Non-negotiable architecture
 
 1. Use Google AI Studio Build Mode's full-stack web runtime: React frontend and Node.js server/backend.
-2. Use Google's official `@google/genai` SDK for all AI calls. **Do not use OpenAI, OpenAI SDKs, or any other AI provider.**
-3. Use the AI Studio-managed Gemini API secret available to the server as `process.env.GEMINI_API_KEY`. AI Studio Build should configure this secret automatically. Do not ask the user to create, paste, or expose an API key manually. Never put secrets in browser code, local storage, source maps, logs, or API responses.
-4. All image analysis and chat must run online through server-side Gemini requests. The browser may do image preview and basic file metadata only. It must never mark an image passed/approved using offline heuristics. If Gemini is unavailable, show a clear error and say **Not analysed**; never produce a pass result.
-5. Do not create a fake UI with hardcoded sample scores. Dashboard metrics must be calculated from real completed analyses; otherwise show an em dash / empty state.
-6. Use a currently available Gemini vision-capable model via a single server-side model configuration constant. If a model name is unavailable, show a clear server configuration error and use a model confirmed available in AI Studio rather than silently switching to another provider.
+2. Use Google's official `@google/genai` SDK (current compatible release) for every AI capability. Prefer Google's current **Gemini Interactions API** (`client.interactions.create`) for new model calls and multi-turn chat, following the current official Google documentation. **Gemini is the ONLY AI provider in this entire application. Do not use ChatGPT, OpenAI models, OpenAI API, OpenAI SDKs, Azure OpenAI, Anthropic/Claude, or any other AI provider.**
+3. Apply this Gemini-only requirement to image classification, vision inspection, OCR/text reading, reference-photo comparison, chat, report writing, policy research/grounding, and any future AI feature. No hidden fallback to another model/provider is allowed. If Gemini is unavailable or quota is exhausted, show a clear error and mark the analysis **Not analysed**; never silently switch providers.
+4. Use the Google AI Studio project's Gemini authentication/managed credential available to this app. Do not ask the user to copy an API key into source code or browser settings. If Build Mode requires a secret to be configured, request it through AI Studio's secure Secrets/credential UI and keep it server-side only. Never embed a credential in frontend code, local storage, source maps, logs, screenshots, or API responses.
+5. All image analysis and chat must run online through server-side Gemini requests. The browser may do image preview and basic file metadata only. It must never mark an image passed/approved using offline heuristics. If Gemini is unavailable, show a clear error and say **Not analysed**; never produce a pass result.
+6. Do not create a fake UI with hardcoded sample scores. Dashboard metrics must be calculated from real completed analyses; otherwise show an em dash / empty state.
+7. Use a currently available Gemini vision-capable model via a single server-side model configuration constant. If a model name is unavailable, show a clear server configuration error and use a model confirmed available in AI Studio rather than silently switching to another provider.
 
 ### Product purpose and user flow
 
@@ -196,6 +197,10 @@ History and privacy:
 - Add a visible AI connection status that is backed by a real server health check.
 - Do not say online/connected until a real server-side Gemini health request succeeds.
 - Add a concise About / Limitations section explaining that this is an advisory tool, not an official marketplace validator.
+
+### Gemini-only compliance gate
+
+Before finishing, search the entire project (dependencies, source files, environment names, API routes, tests, deployment configuration, and documentation) for `openai`, `chatgpt`, `gpt-`, `anthropic`, `claude`, and other non-Google model/provider references. Remove all unused or active non-Gemini integrations and packages. A textual mention in this build specification is not an integration; the shipped application code must have no non-Gemini AI provider implementation. Ensure every AI request is routed to Google Gemini only and is made from the server. Keep a short `AI_PROVIDER.md` stating: provider = Google Gemini only; SDK = official `@google/genai`; API interface = current supported Gemini Interactions API where supported; no ChatGPT/OpenAI/other AI fallback.
 
 ### Completion checks
 
